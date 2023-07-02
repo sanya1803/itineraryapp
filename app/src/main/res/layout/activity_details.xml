@@ -13,20 +13,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/pic"
-                    android:layout_width="408dp"
-                    android:layout_height="312dp"
-                    android:layout_marginEnd="3dp"
-                    android:src="@drawable/goa_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/goa_detail"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,30 +34,30 @@
                     android:layout_width="wrap_content"
                     android:layout_height="65dp"
                     android:background="#70000000"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/pic"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <ImageView
-                    android:id="@+id/imageView6"
+                    android:id="@+id/locIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginBottom="8dp"
-                    android:src="@drawable/marker_detail"
+                    app:srcCompat="@drawable/marker_detail"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
-                    android:id="@+id/titleTxt"
+                    android:id="@+id/titleText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Goa is Calling You!"
-                    android:textColor="#FFFFFF"
+                    android:text="Trip to Goa"
+                    android:textColor="@color/white"
                     android:textSize="21sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/imageView6"
-                    app:layout_constraintTop_toTopOf="@+id/view" />
+                    app:layout_constraintStart_toStartOf="@+id/locIcon"
+                    app:layout_constraintTop_toTopOf="@id/view" />
 
                 <TextView
                     android:id="@+id/locationText"
@@ -66,144 +65,42 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="Goa, India"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textSize="17sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-                    app:layout_constraintStart_toEndOf="@+id/imageView6"
-                    app:layout_constraintTop_toTopOf="@+id/imageView6" />
-
+                    app:layout_constraintBottom_toBottomOf="@id/locIcon"
+                    app:layout_constraintStart_toEndOf="@id/locIcon"
+                    app:layout_constraintTop_toTopOf="@id/locIcon" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/summaryHead"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
                 android:text="Itinerary"
-                android:textStyle="bold"
+                android:textColor="#000000"
                 android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="32dp"
-                />
-
+                android:textStyle="bold" />
             <TextView
-                android:id="@+id/goaDescriptionTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Wondering how to plan a 5 days trip to Goa? Be it a family holiday, vaction with friends. Goa packs the punch for all kind of travelers."
+                android:id="@+id/summaryText"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
                 android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:layout_marginBottom="8dp"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:text="dsjghfgh"/>
 
-            <TextView
-                android:id="@+id/arrivalInGoaTxt"
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="DAY 1: Arrival in Goa."
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="32dp"/>
-            <TextView
-                android:id="@+id/day1Text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Transfer to hotel and Leisure Day.Once you reach the hotel, finish all the check-in formalities so that you can rest for some time after your tiring journey. After a brief rest, you have the entire day at your disposal to do as you please. You can start off by visiting the near-by beaches and enjoy the sandy beaches and scenic beauty of Goa. The swaying coconut trees and laidback fishing villages will definitely set the tone of your vacation. Have dinner exploring there local food. End your Day 1 by heading back to the hotel and getting a good night’s sleep."
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-            <TextView
-                android:id="@+id/northGoaTxt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="DAY 2: North Goa Tour"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="32dp"/>
-            <TextView
-                android:id="@+id/day2Txt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Start your Day 2 by enjoying a Dolphin sightseeing tour. Wake up early in the morning and head out to watch some beautiful dolphins entertaining you with their amazing somersaults on the majestic Arabian Sea. Then, return to your hotel for a hearty breakfast. After you are done with your breakfast, it’s time to explore all the popular tourist spots of North Goa. We begin by visiting Fort Aguada and then hitting all the popular beaches of North Goa which include the Coco Beach, Baga Beach, Anjuna Beach and Calangute Beach. You can spend some time at the Calangute Annexe as well.Your Day 2 itinerary ends here. You can head back to the hotel to relax and get a good night’s sleep so that you are bright and ready for your Day 3 of the tour."
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-            <TextView
-                android:id="@+id/southGoaTxt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="DAY 3: South Goa Tour"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="32dp"/>
-            <TextView
-                android:id="@+id/day3Txt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Begin your Day 3 with a scrumptious and heart breakfast as you would need all your energy for this full day tour of South Goa’s famous tourist spots. The colonial structures and the charming, laidback attitude of South Goa will make this entire day a joyful one. We start off by visiting the Shri Shantadurga Temple in Kavlem and then the Shri Maguesh Temple in Priol.
-
-From here we move on to Old Goa’s famous churches which include Basilicas of Bom Jesus and Se Cathedral. The colonial architecture of these churches will leave you spellbound! The next stop is the Dona Paula Bay where you can spend some time relaxing and then finish off your Day 3 at the Miramar Beach. After this fun-filled and exciting day, it’s time to return to your hotel for your overnight stay."
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textSize="16sp"/>
-            <TextView
-                android:id="@+id/leisureTxt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="DAY 4: Leisure Day"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="32dp"/>
-            <TextView
-                android:id="@+id/day4Txt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Your Day 4 of this itinerary is designed as a day-off where you can explore Goa on your own. With the whole day at your disposal, we are sure you wouldn’t find it difficult to get the best out of Goa. After indulging in some of the yummy delicacies from the breakfast buffet, you can either relax and spend your day at the hotel or you can check out the street markets and flea markets. You will definitely find some good souvenirs to take back home.
-
-Do try out the delicious Goan delicacies which will definitely leave you wanting for more. Once your day has completed, return back to the hotel and unwind."
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textSize="16sp"/>
-            <TextView
-                android:id="@+id/byeTxt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="DAY 5: Goodbye Goa!"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="32dp"/>
-            <TextView
-                android:id="@+id/day5Txt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Your last day in Goa is here and after having a delicious breakfast, it’s time to finish all check-out from the hotel for your journey home"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"
-                android:textSize="16sp"/>
-
-
-
+                android:layout_height="match_parent"
+                android:id="@+id/itineraryView"
+                android:clipToPadding="false"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"/>
         </LinearLayout>
     </ScrollView>
 
