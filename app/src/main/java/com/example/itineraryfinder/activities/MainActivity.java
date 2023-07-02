@@ -8,9 +8,11 @@ import android.os.Bundle;
 
 import com.example.itineraryfinder.Adapter.ItemsAdapter;
 import com.example.itineraryfinder.Domain.ItemsDomain;
+import com.example.itineraryfinder.Domain.ItineraryDomain;
 import com.example.itineraryfinder.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapterPopular, adapterNew;
@@ -27,15 +29,15 @@ public class MainActivity extends AppCompatActivity {
     private void initRecyclerview() {
         ArrayList<ItemsDomain> ItemsArrayList=new ArrayList<>();
 
-        ItemsArrayList.add(new ItemsDomain("Goa is Calling You!", "Goa, India", "Wondering how to plan a 5 days trip to Goa? Be it a family holiday, vaction with friends. Goa packs the punch for all kind of travelers.\n"+"DAY 1: Arrival in Goa. Transfer to hotel and Leisure Day\n"+"Once you reach the hotel, finish all the check-in formalities so that you can rest for some time after your tiring journey. After a brief rest, you have the entire day at your disposal to do as you please. You can start off by visiting the near-by beaches and enjoy the sandy beaches and scenic beauty of Goa. The swaying coconut trees and laidback fishing villages will definitely set the tone of your vacation. Have dinner exploring there local food. End your Day 1 by heading back to the hotel and getting a good night’s sleep.\n"+"DAY 2: North Goa Tour\n"+"Start your Day 2 by enjoying a Dolphin sightseeing tour. Wake up early in the morning and head out to watch some beautiful dolphins entertaining you with their amazing somersaults on the majestic Arabian Sea. Then, return to your hotel for a hearty breakfast. After you are done with your breakfast, it’s time to explore all the popular tourist spots of North Goa. We begin by visiting Fort Aguada and then hitting all the popular beaches of North Goa which include the Coco Beach, Baga Beach, Anjuna Beach and Calangute Beach. You can spend some time at the Calangute Annexe as well.\n" +
-                "\n" +
-                "Your Day 2 itinerary ends here. You can head back to the hotel to relax and get a good night’s sleep so that you are bright and ready for your Day 3 of the tour.\n" +
-                "\n" +
-                "If you love and are excited about water sports, then make sure that you ask our representative to customize your tour package so that you can experience parasailing, banana ride, scuba diving, Jet Ski, and other water sport activities.\n"+"DAY 3: South Goa Tour\n"+"Begin your Day 3 with a scrumptious and heart breakfast as you would need all your energy for this full day tour of South Goa’s famous tourist spots. The colonial structures and the charming, laidback attitude of South Goa will make this entire day a joyful one. We start off by visiting the Shri Shantadurga Temple in Kavlem and then the Shri Maguesh Temple in Priol.\n" +
-                "\n" +
-                "From here we move on to Old Goa’s famous churches which include Basilicas of Bom Jesus and Se Cathedral. The colonial architecture of these churches will leave you spellbound! The next stop is the Dona Paula Bay where you can spend some time relaxing and then finish off your Day 3 at the Miramar Beach. After this fun-filled and exciting day, it’s time to return to your hotel for your overnight stay.\n"+"DAY 4: Goa- Leisure Day\n"+"Your Day 4 of this itinerary is designed as a day-off where you can explore Goa on your own. With the whole day at your disposal, we are sure you wouldn’t find it difficult to get the best out of Goa. After indulging in some of the yummy delicacies from the breakfast buffet, you can either relax and spend your day at the hotel or you can check out the street markets and flea markets. You will definitely find some good souvenirs to take back home.\n" +
-                "\n" +
-                "Do try out the delicious Goan delicacies which will definitely leave you wanting for more. Once your day has completed, return back to the hotel and unwind.\n"+"DAY 5: Goodbye Goa\n"+"Your last day in Goa is here and after having a delicious breakfast, it’s time to finish all check-out from the hotel for your journey home", "India",  "goa"));
+
+        ItemsArrayList.add(new ItemsDomain("Goa is Calling You!", "Goa, India", new ArrayList<ItineraryDomain>(Arrays.asList(
+                new ItineraryDomain("Arrival in Goa. Transfer to hotel and Leisure Day\\n\"+\"Once you reach the hotel, finish all the check-in formalities so that you can rest for some time after your tiring journey. After a brief rest, you have the entire day at your disposal to do as you please. You can start off by visiting the near-by beaches and enjoy the sandy beaches and scenic beauty of Goa. The swaying coconut trees and laidback fishing villages will definitely set the tone of your vacation. Have dinner exploring there local food. End your Day 1 by heading back to the hotel and getting a good night’s sleep."),
+                new ItineraryDomain("North Goa Tour\\n\"+\"Start your Day 2 by enjoying a Dolphin sightseeing tour. Wake up early in the morning and head out to watch some beautiful dolphins entertaining you with their amazing somersaults on the majestic Arabian Sea. Then, return to your hotel for a hearty breakfast. After you are done with your breakfast, it’s time to explore all the popular tourist spots of North Goa. We begin by visiting Fort Aguada and then hitting all the popular beaches of North Goa which include the Coco Beach, Baga Beach, Anjuna Beach and Calangute Beach. You can spend some time at the Calangute Annexe as well.\\n\" +\n" +
+                        "        \"\\n\" +\n" +
+                        "        \"Your Day 2 itinerary ends here. You can head back to the hotel to relax and get a good night’s sleep so that you are bright and ready for your Day 3 of the tour.\\n\" +\n" +
+                        "        \"\\n\" +\n" +
+                        "        \"If you love and are excited about water sports, then make sure that you ask our representative to customize your tour package so that you can experience parasailing, banana ride, scuba diving, Jet Ski, and other water sport activities.")
+        )), "India",  "goa", ""));
 
         ItemsArrayList.add(new ItemsDomain("Heaven on Earth", "Kashmir, India",  "Embark on a vacation with this 4 nights, 5 days Kashmir tour package to Heaven on Earth, Kashmir. This 5-day Kashmir holiday will take you to Srinagar, where you will spend your evening in a shikara. Our Kashmir tour itinerary for 5 days covers Sonmarg, Gulmarg, and Pahalgam. Throughout your vacation, you will be enjoying several activities and amazing sightseeing. From glaciers to river valleys, this Kashmir holiday brings you time to treasure.\n"+"DAY 1: Arrival in Srinagar\n"+"Your arrival in Srinagar, the Summer Capital of Kashmir, is marked by an assisted transfer to the hotel from the airport/railway station. Once reached, check in to the hotel and unwind. Then, enjoy a shikara ride in Dal Lake in the evening.\n" +
                 "\n" +

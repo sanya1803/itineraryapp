@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.itineraryfinder.Domain.ItemsDomain;
 import com.example.itineraryfinder.R;
 import com.example.itineraryfinder.activities.DetailsActivity;
@@ -26,11 +27,11 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
     ArrayList<ItemsDomain> items;
     DecimalFormat formatter;
     Context context;
-    private Instant Glide;
+    //private Instant Glide;
 
     public ItemsAdapter(ArrayList<ItemsDomain> items) {
         this.items = items;
-        formatter= new DecimalFormat("###,###,###,###,###");
+        formatter= new DecimalFormat("###,###,###,###.##");
     }
 
     @NonNull
@@ -49,7 +50,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
        // holder.priceTxt.setText("Rs."+formatter.format(items.get(position).getPrice()));
 
         int drawableResourceId=holder.itemView.getResources().getIdentifier(items.get(position).getPic(), "drawable",holder.itemView.getContext().getPackageName());
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             //Instant with = Glide.with((TemporalAdjuster) holder.itemView.getContext());
            // Object load;
             //load(drawableResourceId);
@@ -57,7 +58,10 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
 
 
 
-        }
+        //}
+        Glide.with(holder.itemView.getContext())
+                        .load(drawableResourceId).into(holder.pic);
+
         holder.itemView.setOnClickListener(view -> {
             Intent intent=new Intent(context, DetailsActivity.class);
             Intent putExtra = intent.putExtra("object", items.get(position));

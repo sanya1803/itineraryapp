@@ -1,23 +1,38 @@
 package com.example.itineraryfinder.Domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class ItemsDomain implements Serializable {
 
     private String title;
     private String placeName;
-    private String itinerary;
+    private ArrayList<ItineraryDomain> itineraryArrayList;
     private String countryName;
     //private int price;
     private String pic;
+    private String summary;
 
-    public ItemsDomain(String title, String placeName, String itinerary, String countryName, String pic) {
+    public void setItineraryArrayList(ArrayList<ItineraryDomain> itineraryArrayList) {
+        this.itineraryArrayList = itineraryArrayList;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public void setSummary(String summary) {
+        this.summary = summary;
+    }
+
+    public ItemsDomain(String title, String placeName, ArrayList<ItineraryDomain>itinerary, String countryName, String pic, String summary) {
         this.title = title;
         this.placeName = placeName;
-        this.itinerary = itinerary;
+        this.itineraryArrayList = itinerary;
         this.countryName = countryName;
        // this.price = Integer.parseInt(price);
         this.pic = pic;
+        this.summary = summary;
     }
 
     public String getTitle() {
@@ -36,12 +51,12 @@ public class ItemsDomain implements Serializable {
         this.placeName = placeName;
     }
 
-    public String getItinerary() {
-        return itinerary;
+    public ArrayList<ItineraryDomain> getItineraryArrayList() {
+        return itineraryArrayList;
     }
 
-    public void setDescription(String itinerary) {
-        this.itinerary = itinerary;
+    public void setDescription(ArrayList<ItineraryDomain> itinerary) {
+        this.itineraryArrayList = itinerary;
     }
 
     public String getCountryName() {
